@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <title>Sequência de Fibonacci</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><span>Sequência</span> Fibonacci</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#formula">Formula</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#codigo">Código</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <div class="container">
+        <div class="banner-text">
+          <div class="banner-heading">
+            Sequência de Fibonacci
+          </div>
+          <div class="banner-sub-heading">
+            <label id="id"></label>
+          </div>
+          <input type="button" value="Calcular" onclick="userfib()" class="btn btn-warning text-dark btn-banner">
+          <div>
+            <label class="banner-sub-heading mt-4" id="id2"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="formula">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://wallpapercave.com/wp/IqhjWKy.png" alt="Formula de Fibonacci">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="codigo">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/fibcod.png" alt="Codigo do fibonacci">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footerfib">
+   <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://avatars2.githubusercontent.com/u/42379076?s=460&v=4" alt="Generic placeholder image" width="140" height="140">
+            <h2 class="mt-2">Ariel Betti</h2>
+            <p>Desenvolvedor Full Steck, novo bonito e elegante.<br>
+            Pode contratar sem medo que esse é bom.</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="img/git.svg" alt="Generic placeholder image" width="140" height="140">
+            <h2 class="mt-2">GitHub</h2>
+            <a href="https://github.com/ArielBetti">
+            <p>Me segue lá no GitHub, não vai ser arrepender só projeto dahora!</p>
+            <button type="button" class="btn btn-outline-light">Seguir</button>
+            </a>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="img/fatec.jpeg" alt="Generic placeholder image" width="140" height="140">
+            <h2 class="mt-2">Fatec Taquaritinga</h2>
+            <p>Esse é um projeto desenvolvido para: Fatec Taquaritinga, resolução do fibonacci e explicação</p>
+            <a href="http://201.55.32.21:8001/">
+            <button type="button" class="btn btn-outline-light">Ver</button>
+            </a>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div>
+          <p>Ariel Betti Copyright © 2018 </p>
+        </div>
+  </footer>        
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script>
+    function userfib() {
+      let a, b, resultado;
+      let user = prompt('Digite um valor');
+
+      a = 0;
+      b = 1;
+      resultado = b;
+      for (let i = 1; i < user; i++) {
+        resultado = a + b;
+        a = b;
+        b = resultado;
+        if (user > 0) {
+          document.getElementById('id2').innerHTML = resultado;
+        }
+      }
+    }
+
+    function fibonacci(n) {
+      return n < 1 ? 0
+        : n <= 2 ? 1
+          : fibonacci(n - 1) + fibonacci(n - 2);
+    }
+    document.getElementById("id").innerHTML = fibonacci(1) + "," + fibonacci(2) + "," + fibonacci(3) + "," + fibonacci(4) + "," + fibonacci(5) + "," + fibonacci(6) + "," + fibonacci(7) + "," + fibonacci(8) + "," + fibonacci(9) + "," + fibonacci(10) + "," + fibonacci(11) + "," + fibonacci(12) + "," + fibonacci(13) + "..." 
+  </script>
+</body>
+
+</html>
