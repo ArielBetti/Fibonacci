@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#formula">Formula</a>
+              <a class="nav-link" href="#formula">Fórmula</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#codigo">Código</a>
@@ -46,9 +46,7 @@
           <div class="banner-heading">
             Sequência de Fibonacci
           </div>
-          <div class="banner-sub-heading">
-            <label id="id"></label>
-          </div>
+          
           <input type="button" value="Calcular" onclick="userfib()" class="btn btn-warning text-dark btn-banner">
           <div>
             <label class="banner-sub-heading mt-4" id="id2"></label>
@@ -138,7 +136,7 @@
         : n <= 2 ? 1
           : fibonacci(n - 1) + fibonacci(n - 2);
     }
-    document.getElementById("id").innerHTML = fibonacci(1) + " " + fibonacci(2) + " " + fibonacci(3) + " " + fibonacci(4) + " " + fibonacci(5) + " " + fibonacci(6) + " " + fibonacci(7) + " " + fibonacci(8) + " " + fibonacci(9) + " " + fibonacci(10) + "..." 
+    document.getElementById("id").innerHTML = fibonacci(1) + ", " + fibonacci(2) + ", " + fibonacci(3) + ", " + fibonacci(4) + ", " + fibonacci(5) + ", " + fibonacci(6) + ", " + fibonacci(7) + ", " + fibonacci(8) + ", " + fibonacci(9) + ", " + fibonacci(10) + "..." 
   </script>
 </body>
 
